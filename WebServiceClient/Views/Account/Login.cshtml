@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+@ViewBag.Name
+@ViewBag.Code
+@ViewBag.Money
+<form action="/Accounts/Login">
+    Customer Code : <input type="text" name="code" required=" " />
+    Security code : <input type="password" name="pass" required=" " />
+    <input type="submit" value="Enter" />
+</form>

@@ -64,6 +64,7 @@ namespace WcfService3
 
                 db.Accounts.AddOrUpdate(sAcount);
                 db.Accounts.AddOrUpdate(rAcount);
+                db.SaveChanges();
                 message = "success";
             }
             return message;

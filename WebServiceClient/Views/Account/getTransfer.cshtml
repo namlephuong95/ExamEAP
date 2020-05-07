@@ -1,0 +1,22 @@
+﻿
+
+@{
+    ViewBag.Title = "Transfer";
+}
+
+<h2>getTransfer</h2>
+
+<form action="/Account/postTransfer" method="post">
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <input type="hidden" name="sCode" class="form-control" value="@ViewBag.Code" />
+        Welcom to : <input type="text" name="name" class="form-control" value="@ViewBag.Name" />
+        Your current balance : <input type="number" name="money" class="form-control" value="@ViewBag.Money" />
+    </div>
+    <div class="form-group">
+        Receiver Code : <input type="text" name="rCode" class="form-control" />
+        Amount : <input type="number" name="amount" class="form-control" />
+    </div>
+    <input type="submit" value="Transfer" class="btn btn-warning"/>
+</form>
+

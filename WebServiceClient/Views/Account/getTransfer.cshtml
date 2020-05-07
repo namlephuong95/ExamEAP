@@ -6,8 +6,7 @@
 
 <h2>getTransfer</h2>
 
-<form action="/Account/postTransfer" method="post">
-    @Html.AntiForgeryToken()
+<form action="/Account/postTransfer">
     <div class="form-group">
         <input type="hidden" name="sCode" class="form-control" value="@ViewBag.Code" />
         Welcom to : <input type="text" name="name" class="form-control" value="@ViewBag.Name" />

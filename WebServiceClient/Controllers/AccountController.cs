@@ -42,8 +42,6 @@ namespace WebServiceClient.Controllers
             return View();
         }
 
-        [ValidateAntiForgeryToken]
-        [HttpPost]
         public ActionResult postTransfer(string sCode, string rCode, double amount)
         {
             var message = serviceClient.TransferMoney(sCode, rCode, amount);
